@@ -21,6 +21,11 @@ model = genai.GenerativeModel(
     model_name='models/gemini-flash-latest'
 )
 
+@app.route('/')
+def home():
+    # This function handles requests to your main URL
+    # https://prism-eswx.onrender.com/
+    return "Backend for Prism is running!"
 # This is our new "process" route
 @app.route("/process", methods=['POST'])
 def process_text():
