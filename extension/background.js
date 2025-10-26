@@ -1,0 +1,1 @@
+// This file is required for Manifest V3 scripting

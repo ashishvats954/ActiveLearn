@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    body {
-      width: 300px;
-      font-family: Arial, sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h3>ActiveLearn Study Assistant</h3>
-  <p>Loading...</p>
+
+  <div id="summary-container">
+    <h3>ActiveLearn Summary</h3>
+    <div id="summary-content">
+      <p>Generating summary...</p>
+    </div>
+    <button id="start-quiz-btn" class="hidden">Start Quiz</button>
+  </div>
+
+  <div id="quiz-container" class="hidden">
+    <h3>Comprehension Quiz</h3>
+    <div id="quiz-content">
+      <p>Loading quiz...</p>
+    </div>
+    <button id="submit-quiz-btn">Submit Quiz</button>
+  </div>
+
+  <div id="recall-container" class="hidden">
+    <h3>Active Recall</h3>
+    <p>In your own words, try to explain the main concepts from the summary.</p>
+    <textarea id="recall-textarea" placeholder="Type your summary here..."></textarea>
+    <button id="submit-recall-btn">Get Feedback</button>
+  </div>
+
+  <div id="results-container" class="hidden">
+    <h3>Your Results</h3>
+    <p id="score-text"></p>
+    <div id="results-content"></div>
+    
+    <div id="eval-container" class="hidden">
+        <h3>Your Summary Feedback</h3>
+        <div id="eval-content"></div>
+    </div>
+  </div>
 
   <script src="popup.js"></script>
 </body>
